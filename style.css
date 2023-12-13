@@ -1,43 +1,92 @@
-body{
-margin: 0;
+body {
+    margin: 0;
 }
-nav{
+
+nav {
     display: flex;
     background-color: black;
     align-items: center;
     justify-content: space-between;
     height: 100px;
 }
-.left-links{
+
+.left-links {
     display: flex;
 
 }
-.left-links a{
-    margin-right: 30px;
+.left-links a:last-child img {
+    width: 20px;
+    height: 20px;
+}
+
+.left-links a {
+    margin-left: 30px;
     text-decoration: none;
-    color:aliceblue;
+    color: aliceblue;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-
 }
 
-.left-links a:nth-child(1), .left-links a:nth-child(3) {
+
+.left-links a:nth-child(1),
+.left-links a:nth-child(3) {
     background-color: red;
 }
-.left-links a:nth-child(2){
+
+.left-links a:nth-child(2) {
     background-color: yellow;
 }
-.left-links a:nth-child(4){
-background-color: blue;
+
+.left-links a:nth-child(4) {
+    background-color: blue;
 }
-.right-links{
+
+.right-links ul {
     display: flex;
+}
+
+.right-links ul li {
+    display: flex;
+    margin-right: 30px;
 
 }
-.right-links a{
-    margin-left: 30px;
+.right-links ul li a{
     text-decoration: none;
-    color:aliceblue;
-    
+    color: aliceblue;
+}
+.right-links ul li:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.right-links ul li:nth-child(4) {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+
+.right-links ul li ul {
+    background-color: red;
+    position: absolute;
+    display: none;
+    margin-left: 0;
+    padding: 0;
+    top: 60px;
+
+}
+
+.right-links ul li ul li {
+    margin: 0;
+    border: 1px solid black;
+
+
+}
+
+.right-links ul li:hover>ul {
+    display: block;
 }
